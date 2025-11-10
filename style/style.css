@@ -1,59 +1,69 @@
-*{
+* {
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
 }
 
-html{
-    font-size: 62.5%;                                           /* Controla el tamalo de todo lo que esta dentro de html.*/      
+html {
+    font-size: 62.5%;
+    /* Controla el tamalo de todo lo que esta dentro de html.*/
 }
-.logo-pequeño{
+
+.logo-pequeño {
     width: 300px;
     height: 200px;
 }
 
-main{
+main {
     height: 100vh;
     width: 100%;
     background-image: url('/IMG/fomdo-cuadrados.jpg');
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    font-weight: <weight>;
+    font-weight: weight;
     font-style: normal;
     position: relative;
 }
 
-.logo-portafolio{
-    font-weight: 500;                                            /* controla el estilo del logo lumen pijamas. */
-    font-size: 3.0rem;                                           /* controla el tamaño de la letras y el espacio interno entre el contenido de un elemento y sus bordes. */
+.logo-portafolio {
+    font-weight: 500;
+    /* controla el estilo del logo lumen pijamas. */
+    font-size: 3.0rem;
+    /* controla el tamaño de la letras y el espacio interno entre el contenido de un elemento y sus bordes. */
     padding: 10px 5px;
     color: white;
 }
 
-nav{
+nav {
     width: 100%;
-    display: flex;                                               /* controla todo lo que esta dentro del navel estillo de,inicio,pijama de niños,pijama de niñas,referencias y acerca de nosotros. */
-    align-items: center;                                         /* posicion,px de distancia,espacio,alineacion. */
+    display: flex;
+    /* controla todo lo que esta dentro del navel estillo de,inicio,pijama de niños,pijama de niñas,referencias y acerca de nosotros. */
+    align-items: center;
+    /* posicion,px de distancia,espacio,alineacion. */
     justify-content: space-between;
     padding: 10px 50px;
 }
 
-ul li{
+ul li {
     display: inline-block;
     list-style: none;
-    padding: 6px 30px;                                            /* controla solamente estilo de inicio,pijama de nilos,pijama de niñas,referencias,acerca de nosotros. */
+    padding: 6px 30px;
+    /* controla solamente estilo de inicio,pijama de nilos,pijama de niñas,referencias,acerca de nosotros. */
     font-weight: 1000;
     font-size: 1.5rem;
     transition: all 0.3s ease 0s;
     cursor: pointer;
 
 }
+
 a {
     color: white;
 }
 
-ul li:hover{                                                      /* Cuando se vaya a usar la etiqueta (hover) usarlajunta no separada. */
-    border-radius: 30px;                                          /* El (border-radius controla los bordes,de ser cuadrados a ser redondos. )*/
-    background-color: red;                
-    color: white;                                                 
+ul li:hover {
+    /* Cuando se vaya a usar la etiqueta (hover) usarlajunta no separada. */
+    border-radius: 30px;
+    /* El (border-radius controla los bordes,de ser cuadrados a ser redondos. )*/
+    background-color: red;
+    color: white;
 }
