@@ -8,10 +8,27 @@ html {
     font-size: 62.5%;
     /* Controla el tamalo de todo lo que esta dentro de html.*/
 }
+.text-matrix {
+  font-size: 16px;
+  animation: slideIn 2s ease-out; /* Controla la animacion de deslizamiento*/
+  text-shadow: 0 0 5px red; /* Crea una sombra en el texto*/
+  color: white;
+}
+
+@keyframes slideIn {  /* para crear animaciones complejas definiendo una secuencia de estilos para un elemento en diferentes puntos de tiempo*/
+    from {transform: translateX(-100%); opacity: 0;}    /* - para salir desde la izquierda y el positivo para salir de derecha*/
+    to {transform: translateX(0); opacity: 1;}
+}
+
 
 .logo-pequeño {
     width: 300px;
     height: 200px;
+    animation: slideImg 2s ease-out;
+}
+@keyframes slideImg {
+    from {transform: translateY(-100%); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
 }
 
 main {
@@ -23,15 +40,6 @@ main {
     font-weight: weight;
     font-style: normal;
     position: relative;
-}
-
-.logo-portafolio {
-    font-weight: 500;
-    /* controla el estilo del logo lumen pijamas. */
-    font-size: 3.0rem;
-    /* controla el tamaño de la letras y el espacio interno entre el contenido de un elemento y sus bordes. */
-    padding: 10px 5px;
-    color: white;
 }
 
 nav {
@@ -67,3 +75,48 @@ ul li:hover {
     background-color: red;
     color: white;
 }
+
+.actividad1 {
+    background-color: red;
+    margin: 10px;
+    padding: 10px;
+    margin-left: 50px;
+    margin-top: 100px;
+    border-radius: 50px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.actividad1:hover{
+    background-color: darkgray;
+    transform: scale(1.5);
+}
+.actividad2 {
+    background-color: red;
+    margin: 10px;
+    padding: 10px;
+    margin-left: 50px;
+    margin-top: 100px;
+    border-radius: 50px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.actividad2:hover{
+    background-color: darkgray;
+    transform: scale(1.5);
+}
+
+.actividad3 {
+    background-color: red;
+    margin: 10px;
+    padding: 10px;
+    margin-left: 50px;
+    margin-top: 100px;
+    border-radius: 50px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.actividad3:hover{
+    background-color: darkgray;
+    transform: scale(1.5);
+}
+
