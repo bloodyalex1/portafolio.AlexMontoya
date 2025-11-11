@@ -17,7 +17,7 @@ html {
 main {
     height: 100vh;
     width: 100%;
-    background-image: url('/IMG/fomdo-cuadrados.jpg');
+    background-image: url(../IMG/fondo-neon-tunel.jpg);
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
