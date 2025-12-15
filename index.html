@@ -4,27 +4,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTAFOLIO</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Portafolio | Alex</title>
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
 <body>
-    <main>
-        <div class="container">
-            <nav>
-                <img title="Logo de Portafolio" src="IMG/logo-sinfondo.png" alt="Logo Portafolio" class="logo-pequeño">z
-                <div class="text-matrix">
-                    <h1 title="Nombre del dueño del Portafolio"> Alex Largo Montoya</h1>
-                </div>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="actividades-github.html">Actividades TL Riwi</a></li>
-                    <li><a href="Actividades-moodle.html">Proyectos moodle</a></li>
-                    <li><a href="Proyectos-personales.html">Proyectos personales</a></li>
-                    <li><a href="#AcercadeMi">Acerca de mi</a></li>
-                </ul>
-            </nav>
+    <!-- Menu de navegacion -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <span>Alex</span>
+            </div>
+            <div class="links">
+                <div class="links"><a href="#">Home</a></div>
+                <div class="links"><a href="#">About</a></div>
+                <div class="links"><a href="#">Skills</a></div>
+                <div class="links"><a href="#">Services</a></div>
+                <div class="links"><a href="./tl-activ.html">Tl Activities</a></div>
+                <div class="links"><a href="./moodle.html">Moodle Activ</a></div>
+                <div class="links"><a href="#">Contact</a></div>
+
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg"></i>
         </div>
-    </main>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Skills</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="main-container">
+            <div class="image">
+                <img src="./IMG/Portafolio.jpeg" alt="">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left">
+                    Hey I'am
+                    <span>Alex</span>
+                </h1>
+                <div class="typewriter">
+                    I'm a
+                    <span class="typewriter-text"></span>
+                    <label for="">|</label>
+                </div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni atque reprehenderit beatae quasi
+                    repellat facilis consequatur quis minima neque quaerat. Accusamus commodi maiores recusandae, amet
+                    debitis aliquam ea in veniam!</p>
+                <div class="social-links">
+                    <a href="#">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+                <div class="btn">
+                    <button>Hire me</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Abaout section star -->
+    <section class="about" id="about">
+        <div class="content">
+            <div class="title"><span>About me</span></div>
+            <div class="about-details">
+                <div class="left">
+                    <img src="./IMG/Screenshot 2025-12-15 143333.png" alt="">
+                </div>
+                <div class="right">
+                    <div class="topic">Designing is My Passion</div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aliquam ducimus maiores fuga
+                        qui mollitia, minus quae ratione ipsum. Iste tempore tenetur esse aliquam quia soluta labore
+                        fuga! Maxime, consectetur!
+                    </p>
+                    <div class="button">
+                        <button>Download CV</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- My skill Section Start -->
+    <section class="skills" id="skills">
+        <div class="cotent">
+            <div class="title"><span>My Skills</span></div>
+            <div class="skills-details">
+                <div class="text">
+                    <div class="topic">
+                        Skills Reflects Our Knowledge
+                    </div>
+                    <p data-aos="fade-right">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem
+                        perspiciatis at aliquid dicta, culpa voluptas vel vitae ab reprehenderit voluptatem doloribus
+                        provident porro reiciendis facilis non impedit recusandae? Deserunt, porro.</p>
+                    <div class="experience">
+                        <div class="num">10</div>
+                        <div class="exp">
+                            Years Of <br>
+                            Experience
+                        </div>
+                    </div>
+                </div>
+                <div class="boxes">
+                    <div class="box">
+                        <div class="topic">HTML</div>
+                        <div class="per">90%</div>
+                    </div>
+                    <div class="box">
+                        <div class="topic">CSS</div>
+                        <div class="per">80%</div>
+                    </div>
+                    <div class="box">
+                        <div class="topic">JavScript</div>
+                        <div class="per">70%</div>
+                    </div>
+                    <div class="box">
+                        <div class="topic">PYTHON</div>
+                        <div class="per">80%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MY Services Section Start -->
+    <section class="services" id="services">
+        <div class="content">
+            <div class="title"><span>My Services</span></div>
+            <div class="boxes">
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="topic">Web Devlopment</div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis officiis est rerum provident
+                        ipsum voluptatem excepturi unde nesciunt laboriosam ea necessitatibus quas laborum numquam
+                        quisquam consequuntur aspernatur, consectetur illum iste!</p>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="topic">Graphic Design</div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea expedita veritatis consectetur,
+                        distinctio impedit, veniam repudiandae aperiam rerum odio, corporis quo natus? Error, iure
+                        reprehenderit dolore dicta eius necessitatibus expedita?</p>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="topic">Digital Marketing</div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eligendi optio non esse aut,
+                        accusantium dicta reiciendis voluptatum et ipsum ipsa voluptatibus earum corporis ab adipisci
+                        enim consectetur quae vel.</p>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fab fa-android"></i>
+                    </div>
+                    <div class="topic">Icon Design</div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore voluptas eligendi qui neque sed
+                        ipsam corporis ullam dignissimos ad quia ut modi reprehenderit ipsa, totam tenetur eaque, vero
+                        voluptates blanditiis?</p>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-camera-retro"></i>
+                    </div>
+                    <div class="topic">Phtography</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates provident deserunt quasi
+                        quisquam fuga aliquid culpa consectetur architecto expedita iusto iure, eum eos doloremque,
+                        quibusdam nobis, delectus recusandae labore rerum.</p>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-tablet-alt"></i>
+                    </div>
+                    <div class="topic">Apps Devlopment</div>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit, enim voluptas! Asperiores neque
+                        ad fugiat cumque, et, eius quas aliquid eveniet deserunt saepe, optio quos. Dolorum dolorem in
+                        autem eaque?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="content">
+            <div class="title">
+                <span>Contact Me</span>
+            </div>
+            <div class="text">
+                <div class="topic">¿Have Any Proyect?</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis hic nisi laborum totam impedit
+                    necessitatibus consequatur est quos expedita iste, incidunt, sint placeat perferendis iure illum
+                    nihil natus inventore distinctio?</p>
+                <div class="button">
+                    <button>Let's Chat</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Section Start -->
+    <footer>
+        <div class="text">
+            <span> Created by
+                <a href="#"> BloodyAlex1</a>
+                &#169; 2025 All Rights Reserved</span>
+        </div>
+    </footer>
+    <script src="./scripts(JS)portafolio/script.js"></script>
+
 </body>
+
 </html>

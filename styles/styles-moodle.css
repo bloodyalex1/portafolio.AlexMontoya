@@ -1,0 +1,278 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to right, rgb(0, 0, 0),rgb(124, 0, 0), black);
+    overflow-x: hidden;
+}
+
+/* Custom scroll bar css */
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background: linear-gradient(to bottom, rgb(255, 255, 255), black, rgb(255, 255, 255));
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(to top, black, rgb(255, 0, 0), black);
+    border-radius: 15px;
+    transition:  all 0.5s ease;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: red;
+}
+
+/* nav: styling */
+nav{
+    width: 100%;
+    height: 100%;
+}
+.nav-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+.logo-moodle{
+    font-size: 4em;
+    font-weight: bold;
+    background: linear-gradient(to bottom,rgb(0, 183, 255),rgb(255, 0, 0));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.logo span{
+    color: red;
+    text-shadow: 0 0 10px red;
+}
+.humberg,
+.cancel{
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: rgb(125,0,0);
+    opacity: 0;
+    pointer-events: none;
+    font-size: clamp(2.5rem,0.5rem + 5vw, 3rem);
+}
+.nav-container .links{
+    display: flex;
+}
+.nav-container .links a{
+    position: relative;
+    font-size: 1.2rem;
+    color: white;
+    margin:  0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition:  0.3s linear;
+}
+
+.nav-container .links a::before{
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0%;
+    width: 0%;
+    height: 3px;
+    background-color: rgb(255, 0, 0);
+    transition:  0.2s linear;
+}
+
+.nav-container .links a:hover::before{
+    width: 100%;
+}
+.nav-container .links a:hover{
+    color: rgb(0, 0, 0);
+}
+.typewriter-text label{
+    animation: blink-caret 0.75s step-end infinite;
+    font-size: 1.2em;
+    color: red;
+}
+@keyframes blink-caret{
+    from, to {border-color: transparent;}
+    50%{border-color: red;}
+}
+
+
+.dropdown{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(4px) brightness(40%);
+    box-shadow: 0 0 20px black;
+    transition: 0.2s linear;
+}
+.dropdown .links a{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    padding:  15px 0;
+    align-items: center;
+    transition: 0.2s linear
+}
+.dropdown .links a:hover{
+    background-color: rgb(125,0,0);
+}
+
+footer{
+    background: linear-gradient(to top,red,black);
+    padding: 15px 0;
+    text-align: center;
+    font-family: 'Poppins' sans-serif;
+    box-shadow: 1px 5px 20px 2px red;
+}
+footer .text span{
+    font-size: 17px;
+    font-weight: 400;
+    color: white;
+}
+footer .text span a{
+    font-weight: 500;
+    color: white;
+    transition: 0.5s linea;
+}
+footer .text span a:hover{
+    text-decoration: underline;
+}
+.scroll-button a{
+    position: flex;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    background: red;
+    padding: 7px 12px;
+    font-size: 18px;
+    border-radius: 6px;
+    box-shadow: black;
+    display: none;
+}
+
+
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow:  hidden;
+    position: relative;
+}
+
+.banner .slider {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 20%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation:  autoRun 15s linear infinite;
+    perspective: perspective(1000px);
+    z-index: 2;
+}
+@keyframes autoRun{
+    from {
+        transform: perspective(1000px) rotateX(-10deg) rotateY(0deg);
+    }to{
+        transform:  perspective(1000px) rotateX(-10deg)  rotateY(-360deg);
+    }
+}
+
+.banner .slider .item{
+    position: absolute;
+    inset: 0;
+    transform:
+        rotateY(calc((var(--position) - 1)* (360 / var(--quantify))* 1deg))
+        translateZ(350px);
+}
+
+.banner .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner .slider .item a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.banner .slider .item a img{
+    border-radius: 10px;
+} 
+.banner .slider .item a .moodle1{
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0, 0, 0),
+                0 0 10px rgb(0, 0, 0),
+                0 0 10px rgb(0, 0, 0)
+}
+
+.banner .slider .item a .moodle2{
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(94, 94, 94),
+                0 0 10px rgb(94, 94, 94),
+                0 0 10px rgb(94, 94, 94)
+}
+
+.banner .slider .item a .moodle3{
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(25, 0, 255),
+                0 0 10px rgb(25, 0, 255),
+                0 0 10px rgb(55, 0, 255)
+}
+.banner .slider .item a .moodle4{
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(195, 0, 255),
+                0 0 10px rgb(195, 0, 255),
+                0 0 10px rgb(195, 0, 255)
+}
+.banner .content {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* centra el h1 */
+    z-index: 1;
+}
+
+.banner .content h1{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 16mm;
+    line-height: 1em;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.banner .content h1::after{
+    position: absolute;
+    inset: 0;
+    content: attr(data-content);
+}

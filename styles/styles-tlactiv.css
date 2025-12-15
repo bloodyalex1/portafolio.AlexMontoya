@@ -1,0 +1,261 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to right, rgb(0, 0, 0),rgb(124, 0, 0), black);
+    overflow-x: hidden;
+}
+
+/* Custom scroll bar css */
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background: linear-gradient(to bottom, rgb(255, 255, 255), black, rgb(255, 255, 255));
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(to top, black, rgb(255, 0, 0), black);
+    border-radius: 15px;
+    transition:  all 0.5s ease;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: red;
+}
+
+/* nav: styling */
+nav{
+    width: 100%;
+    height: 100%;
+}
+.nav-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+.logo span{
+    color: red;
+    text-shadow: 0 0 10px red;
+}
+.humberg,
+.cancel{
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: rgb(125,0,0);
+    opacity: 0;
+    pointer-events: none;
+    font-size: clamp(2.5rem,0.5rem + 5vw, 3rem);
+}
+.nav-container .links{
+    display: flex;
+}
+.nav-container .links a{
+    position: relative;
+    font-size: 1.2rem;
+    color: white;
+    margin:  0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition:  0.3s linear;
+}
+
+.nav-container .links a::before{
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0%;
+    width: 0%;
+    height: 3px;
+    background-color: rgb(255, 0, 0);
+    transition:  0.2s linear;
+}
+
+.nav-container .links a:hover::before{
+    width: 100%;
+}
+.nav-container .links a:hover{
+    color: rgb(0, 0, 0);
+}
+.typewriter-text label{
+    animation: blink-caret 0.75s step-end infinite;
+    font-size: 1.2em;
+    color: red;
+}
+@keyframes blink-caret{
+    from, to {border-color: transparent;}
+    50%{border-color: red;}
+}
+section button{
+    background-color: red;
+    color: white;
+    margin: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0 50%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+section button a{
+    color: white;
+    text-decoration: none;
+}
+section button:hover{
+    background-color: rgb(139, 0, 0);
+}
+
+section .title{
+    display: flex;
+    justify-content: center;
+    margin-bottom:  40px;
+}
+section .title span{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
+}
+section .title span::before,
+section .title span::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: rgb(255, 0, 0);
+    left: 0%;
+    bottom: 0;
+}
+section .title span::after{
+    bottom: -7px;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.dropdown{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(4px) brightness(40%);
+    box-shadow: 0 0 20px black;
+    transition: 0.2s linear;
+}
+.dropdown .links a{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    padding:  15px 0;
+    align-items: center;
+    transition: 0.2s linear
+}
+.dropdown .links a:hover{
+    background-color: rgb(125,0,0);
+}
+.services .boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.services .boxes .box{
+    margin: 20px 0;
+    width: calc(100% / 3 - 20px);
+    text-align: center;
+    border-radius: 12px;
+    padding: 30px 10px;
+    box-shadow: 10px 9px 20px 2px rgb(255, 0, 0); /** El primero es el desplazamiento,El segundo El tamayo de la parte supeior(Inferiror) El tercero el dtamaño del sombreado, EL ancho de la sombra */
+    cursor: default;
+    color: white;
+    transition: all 0.4s ease;
+}
+.services .boxes .box{
+    background: rgb(0, 0, 0);
+}
+.services .boxes .box:hover{
+    background: rgb(97, 0, 0);
+    color: rgb(255, 255, 255);
+}
+.services .boxes .box .icon{
+    height: 50px;
+    width: 50px;
+    background: rgb(117, 0, 0);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    color: white;
+    box-shadow: 5px 1px 20px 2px red;
+    margin: 0 auto 10px auto;
+    transition: all 0.4s ease;
+}
+.services .boxes .box .icon:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p{
+    color: white;
+    transition: all 0.4s ease;
+}
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p{
+    color: white;
+}
+
+
+
+
+
+
+footer{
+    background: linear-gradient(to top,red,black);
+    padding: 15px 0;
+    text-align: center;
+    font-family: 'Poppins' sans-serif;
+    box-shadow: 1px 5px 20px 2px red;
+}
+footer .text span{
+    font-size: 17px;
+    font-weight: 400;
+    color: white;
+}
+footer .text span a{
+    font-weight: 500;
+    color: white;
+    transition: 0.5s linea;
+}
+footer .text span a:hover{
+    text-decoration: underline;
+}
+.scroll-button a{
+    position: flex;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    background: red;
+    padding: 7px 12px;
+    font-size: 18px;
+    border-radius: 6px;
+    box-shadow: black;
+    display: none;
+}
