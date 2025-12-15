@@ -24,7 +24,7 @@ html {
 .text-matrix1 {
   font-size: 16px;
   animation: slide2 2s ease-out; /* Controla la animacion de deslizamiento*/
-  text-shadow: 0 0 5px rgb(153, 0, 255); /* Crea una sombra en el texto*/
+  text-shadow: 0 0 5px rgb(204, 0, 255); /* Crea una sombra en el texto*/
   color: white;
 }
 
@@ -35,7 +35,7 @@ html {
 .text-matrix2 {
   font-size: 16px;
   animation: slide3 2s ease-out; /* Controla la animacion de deslizamiento*/
-  text-shadow: 0 0 5px red; /* Crea una sombra en el texto*/
+  text-shadow: 0 0 5px rgb(204, 0, 255); /* Crea una sombra en el texto*/
   color: white;
 }
 
@@ -46,7 +46,7 @@ html {
 .text-matrix3 {
   font-size: 16px;
   animation: slide4 2s ease-out; /* Controla la animacion de deslizamiento*/
-  text-shadow: 0 0 5px red; /* Crea una sombra en el texto*/
+  text-shadow: 0 0 5px rgb(204, 0, 255); /* Crea una sombra en el texto*/
   color: white;
 }
 
@@ -54,8 +54,6 @@ html {
     from{transform: translateY(-100%); opacity: 0;}
     to {transform: translateY(0);opacity: 1;}
 }
-
-
 
 .logo-pequeño {
     width: 300px;
